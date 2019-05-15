@@ -1,17 +1,14 @@
-# FROM node:8.16.0-alpine
-FROM node:8.16.0
+FROM node:8.16.0-alpine
 MAINTAINER yaming1106@gmail.com
 
 WORKDIR /yolo-nodejs
 
 COPY . .
 
-RUN apt-get update && \
-    # bash npm install && \
-    rm -rf /var/lib/apt/lists/*
-
-RUN npm install 
+RUN apk add --no-cache make gcc g++ python bash && \
+    npm install && \
+    apk del make gcc g++ python bash
 
 EXPOSE 3000
 
- CMD npm start
+CMD npm start

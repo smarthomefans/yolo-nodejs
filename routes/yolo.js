@@ -2,7 +2,7 @@ var express = require('express');
 var path = require('path')
 var fs = require('fs')
 var router = express.Router();
-var Darknet = require('smarthomefan-darknet').Darknet;
+var Darknet = require('smarthomefans-darknet').Darknet;
 
 const darknet = new Darknet({
   weights: path.join(__dirname, '../conf/yolov3-tiny.weights'),
