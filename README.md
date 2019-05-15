@@ -20,6 +20,10 @@ Darknet.JS express封装版本
 docker build -t smarthomefans/yolo-nodejs:1.0.0 .
 ```
 
+```
+docker run --rm --name yolo -d -p 3000:3000 smarthomefans/yolo-nodejs:latest
+```
+
 
 
 ## 感谢
