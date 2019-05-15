@@ -24,6 +24,10 @@ docker build -t smarthomefans/yolo-nodejs:1.0.0 .
 docker run --rm --name yolo -d -p 3000:3000 smarthomefans/yolo-nodejs:latest
 ```
 
+访问 `ip:3000`或你自己修改的端口，发现一下页面则成功安装：
+
+![图片](images/index.png)
+
 
 
 ## 感谢
