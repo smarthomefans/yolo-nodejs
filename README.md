@@ -17,7 +17,7 @@ Darknet.JS express封装版本
 `darknet`的配置文件在`/yolo-nodejs/conf`目录下面，默认参数使用的是`tiny`版本的，如果自己有更高的精度需求可以自行修改
 
 ```
-docker build -t smarthomefan/yolo-nodejs:1.0.0 .
+docker build -t smarthomefans/yolo-nodejs:1.0.0 .
 ```
 
 
