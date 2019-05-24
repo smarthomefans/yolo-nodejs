@@ -17,6 +17,11 @@ router.post('/', function(req, res, next) {
     var buffer = Buffer.from(req.body.image, 'base64')
     var imagePath = path.join(__dirname, "../", "public", 'static', `${new Date().getTime()}.jpg`)
     fs.writeFileSync(imagePath, buffer)
+
+    var stat = fs.statSync(imagePath)
+    if (stat.size < 20 * 1024) {
+      res.status(500).json('image to small')
+    }
     var res_data = darknet.detect(imagePath)
 
     if (!req.body.no_delete) {
